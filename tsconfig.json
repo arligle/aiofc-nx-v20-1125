@@ -4,6 +4,7 @@
   "files": [],
   "references": [
     { "path": "./packages/config" },
-    { "path": "./packages/logger" }
+    { "path": "./packages/logger" },
+    { "path": "./packages/i18n" }
   ]
 }
