@@ -18,6 +18,7 @@
     { "path": "./packages/common-types" },
     { "path": "./packages/typeorm" },
     { "path": "./packages/service-base" },
-    { "path": "./packages/auth" }
+    { "path": "./packages/auth" },
+    { "path": "./examples/typeorm-auth-demo" }
   ]
 }
