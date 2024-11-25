@@ -2,7 +2,7 @@
   "name": "@aiofc-nx-v20-1125/source",
   "version": "0.0.0",
   "license": "MIT",
- "packageManager": "pnpm@9.13.2",
+  "packageManager": "pnpm@9.13.2",
   "volta": {
     "node": "20.16.0",
     "pnpm": "9.13.2"
@@ -98,6 +98,7 @@
     "@aiofc/service-base": "workspace:*",
     "@aiofc/persistence-base": "workspace:*",
     "@aiofc/typeorm": "workspace:*",
+    "@aiofc/auth": "workspace:*",
     "@faker-js/faker": "^9.2.0",
     "@fastify/helmet": "^11.0.0",
     "@grpc/grpc-js": "^1.12.2",

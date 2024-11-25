@@ -17,6 +17,7 @@
     { "path": "./packages/persistence-base" },
     { "path": "./packages/common-types" },
     { "path": "./packages/typeorm" },
-    { "path": "./packages/service-base" }
+    { "path": "./packages/service-base" },
+    { "path": "./packages/auth" }
   ]
 }
