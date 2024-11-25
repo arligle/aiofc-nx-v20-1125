@@ -2,7 +2,6 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "declaration": true,
     "types": ["node"],
     "target": "es2021",
     "strictNullChecks": true,
@@ -13,8 +12,9 @@
   },
   "include": ["src/**/*.ts"],
   "references": [
-    { "path": "../exceptions/tsconfig.lib.json" },
+    { "path": "../validation/tsconfig.lib.json" },
     { "path": "../i18n/tsconfig.lib.json" },
-    { "path": "../validation/tsconfig.lib.json" }
+    { "path": "../exceptions/tsconfig.lib.json" },
+    { "path": "../common-types/tsconfig.lib.json" }
   ]
 }

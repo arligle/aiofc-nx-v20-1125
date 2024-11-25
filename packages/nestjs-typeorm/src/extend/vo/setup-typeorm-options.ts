@@ -1,7 +1,7 @@
 import { Type } from '@nestjs/common';
-import { TypeOrmOptionsFactory } from '@nestjs/typeorm';
 import { MixedList } from 'typeorm';
-import { TypeOrmConfigService } from '../config/typeorm-config.service';
+import { TypeOrmOptionsFactory } from '../../core';
+import { TypeOrmConfigService } from '../../config/typeorm-config.service';
 
 export interface SetupTypeormOptions {
   optionsFactory?: Type<TypeOrmOptionsFactory>;

@@ -13,9 +13,10 @@
   "files": [],
   "include": [],
   "references": [
-    { "path": "../exceptions" },
-    { "path": "../i18n" },
     { "path": "../validation" },
+    { "path": "../i18n" },
+    { "path": "../exceptions" },
+    { "path": "../common-types" },
     { "path": "./tsconfig.lib.json" }
   ]
 }
