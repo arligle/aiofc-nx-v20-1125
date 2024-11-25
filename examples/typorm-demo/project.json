@@ -1,0 +1,26 @@
+{
+  "name": "typorm-demo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "examples/typorm-demo/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "typorm-demo:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "typorm-demo:build:development"
+        },
+        "production": {
+          "buildTarget": "typorm-demo:build:production"
+        }
+      }
+    }
+  }
+}
