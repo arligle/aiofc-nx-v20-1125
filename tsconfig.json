@@ -8,6 +8,8 @@
     { "path": "./packages/i18n" },
     { "path": "./packages/exceptions" },
     { "path": "./packages/validation" },
-    { "path": "./packages/utils" }
+    { "path": "./packages/utils" },
+    { "path": "./packages/fastify-server" },
+    { "path": "./examples/fastify-server-demo" }
   ]
 }
