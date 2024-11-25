@@ -85,6 +85,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@aiofc/async-storage": "workspace:*",
     "@aiofc/config": "workspace:*",
     "@aiofc/logger": "workspace:*",
     "@aiofc/i18n": "workspace:*",

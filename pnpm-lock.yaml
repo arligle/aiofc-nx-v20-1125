@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@aiofc/async-storage':
+        specifier: workspace:*
+        version: link:packages/async-storage
       '@aiofc/config':
         specifier: workspace:*
         version: link:packages/config
@@ -354,6 +357,18 @@ importers:
       webpack-cli:
         specifier: ^5.1.4
         version: 5.1.4(webpack@5.96.1)
+
+  packages/async-storage:
+    dependencies:
+      '@nestjs/common':
+        specifier: ^10.0.2
+        version: 10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      nestjs-cls:
+        specifier: ^4.4.1
+        version: 4.4.1(@nestjs/common@10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.9)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.1
 
   packages/config:
     dependencies:
@@ -12229,7 +12244,7 @@ snapshots:
 
   copy-webpack-plugin@10.2.4(webpack@5.96.1):
     dependencies:
-      fast-glob: 3.2.7
+      fast-glob: 3.3.2
       glob-parent: 6.0.2
       globby: 12.2.0
       normalize-path: 3.0.0
@@ -13459,7 +13474,7 @@ snapshots:
     dependencies:
       array-union: 3.0.1
       dir-glob: 3.0.1
-      fast-glob: 3.2.7
+      fast-glob: 3.3.2
       ignore: 5.3.2
       merge2: 1.4.1
       slash: 4.0.0
