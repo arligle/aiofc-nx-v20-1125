@@ -85,12 +85,14 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@aiofc/async-storage": "workspace:*",
     "@aiofc/config": "workspace:*",
     "@aiofc/logger": "workspace:*",
     "@aiofc/i18n": "workspace:*",
     "@aiofc/exceptions": "workspace:*",
     "@aiofc/validation": "workspace:*",
     "@aiofc/utils": "workspace:*",
+    "@aiofc/fastify-server": "workspace:*",
     "@faker-js/faker": "^9.2.0",
     "@fastify/helmet": "^11.0.0",
     "@grpc/grpc-js": "^1.12.2",
