@@ -16,6 +16,7 @@
     { "path": "./examples/typorm-demo" },
     { "path": "./packages/persistence-base" },
     { "path": "./packages/common-types" },
-    { "path": "./packages/typeorm" }
+    { "path": "./packages/typeorm" },
+    { "path": "./packages/service-base" }
   ]
 }

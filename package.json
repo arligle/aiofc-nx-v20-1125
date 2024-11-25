@@ -95,6 +95,7 @@
     "@aiofc/fastify-server": "workspace:*",
     "@aiofc/nestjs-typeorm": "workspace:*",
     "@aiofc/common-types": "workspace:*",
+    "@aiofc/service-base": "workspace:*",
     "@aiofc/persistence-base": "workspace:*",
     "@aiofc/typeorm": "workspace:*",
     "@faker-js/faker": "^9.2.0",
