@@ -11,12 +11,21 @@ importers:
       '@aiofc/config':
         specifier: workspace:*
         version: link:packages/config
+      '@aiofc/exceptions':
+        specifier: workspace:*
+        version: link:packages/exceptions
       '@aiofc/i18n':
         specifier: workspace:*
         version: link:packages/i18n
       '@aiofc/logger':
         specifier: workspace:*
         version: link:packages/logger
+      '@aiofc/utils':
+        specifier: workspace:*
+        version: link:packages/utils
+      '@aiofc/validation':
+        specifier: workspace:*
+        version: link:packages/validation
       '@faker-js/faker':
         specifier: ^9.2.0
         version: 9.2.0
@@ -385,6 +394,24 @@ importers:
         specifier: ^2.3.0
         version: 2.8.1
 
+  packages/exceptions:
+    dependencies:
+      '@aiofc/i18n':
+        specifier: workspace:*
+        version: link:../i18n
+      '@nestjs/common':
+        specifier: ^10.0.2
+        version: 10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      '@nestjs/core':
+        specifier: ^10.0.2
+        version: 10.4.9(@nestjs/common@10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@10.4.9)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      '@nestjs/swagger':
+        specifier: ^7.4.2
+        version: 7.4.2(@nestjs/common@10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.9)(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.1
+
   packages/i18n:
     dependencies:
       '@grpc/grpc-js':
@@ -474,6 +501,42 @@ importers:
       tslib:
         specifier: ^2.3.0
         version: 2.8.1
+
+  packages/utils:
+    dependencies:
+      argon2:
+        specifier: ^0.41.1
+        version: 0.41.1
+      nanoid:
+        specifier: 3.3.7
+        version: 3.3.7
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.1
+
+  packages/validation:
+    dependencies:
+      '@aiofc/exceptions':
+        specifier: workspace:*
+        version: link:../exceptions
+      '@aiofc/i18n':
+        specifier: workspace:*
+        version: link:../i18n
+      '@nestjs/common':
+        specifier: ^10.0.2
+        version: 10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      class-transformer:
+        specifier: ^0.5.1
+        version: 0.5.1
+      class-validator:
+        specifier: ^0.14.1
+        version: 0.14.1
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.1
+      validator:
+        specifier: 13.12.0
+        version: 13.12.0
 
 packages:
 
@@ -9948,6 +10011,14 @@ snapshots:
       class-transformer: 0.5.1
       class-validator: 0.14.1
 
+  '@nestjs/mapped-types@2.0.5(@nestjs/common@10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)':
+    dependencies:
+      '@nestjs/common': 10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      reflect-metadata: 0.2.2
+    optionalDependencies:
+      class-transformer: 0.5.1
+      class-validator: 0.14.1
+
   '@nestjs/passport@10.0.3(@nestjs/common@10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1))(passport@0.7.0)':
     dependencies:
       '@nestjs/common': 10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.1.14)(rxjs@7.8.1)
@@ -10021,6 +10092,21 @@ snapshots:
       lodash: 4.17.21
       path-to-regexp: 3.3.0
       reflect-metadata: 0.1.14
+      swagger-ui-dist: 5.17.14
+    optionalDependencies:
+      class-transformer: 0.5.1
+      class-validator: 0.14.1
+
+  '@nestjs/swagger@7.4.2(@nestjs/common@10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.9)(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)':
+    dependencies:
+      '@microsoft/tsdoc': 0.15.1
+      '@nestjs/common': 10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      '@nestjs/core': 10.4.9(@nestjs/common@10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@10.4.9)(reflect-metadata@0.2.2)(rxjs@7.8.1)
+      '@nestjs/mapped-types': 2.0.5(@nestjs/common@10.4.9(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)
+      js-yaml: 4.1.0
+      lodash: 4.17.21
+      path-to-regexp: 3.3.0
+      reflect-metadata: 0.2.2
       swagger-ui-dist: 5.17.14
     optionalDependencies:
       class-transformer: 0.5.1
