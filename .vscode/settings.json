@@ -27,5 +27,8 @@
     "webp",
     "websockets"
   ],
-  "eslint.validate": ["json"]
+  "eslint.validate": [
+    "json"
+  ],
+  "nxConsole.nxWorkspacePath": ""
 }
