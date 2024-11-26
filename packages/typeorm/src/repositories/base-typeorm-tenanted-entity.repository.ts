@@ -3,15 +3,15 @@ import { DataSource, FindOptionsWhere } from 'typeorm';
 import { GeneralInternalServerException } from '@aiofc/exceptions';
 import { BaseTypeormTrackedEntityRepository } from './base-typeorm-tracked-entity.repository';
 import { ObjectType } from 'typeorm/common/ObjectType';
-import { BaseTenantEntity } from '../entity/base-tenant.entity';
+import { AbstractBaseTenantEntity } from '../entity/abstract-base-tenant.entity';
 import { TenantClsStore } from '@aiofc/persistence-base';
 
 export abstract class BaseTypeormTenantedEntityRepository<
-  ENTITY extends BaseTenantEntity,
+  ENTITY extends AbstractBaseTenantEntity,
   ID extends keyof ENTITY,
   FIELDS_REQUIRED_FOR_UPDATE extends keyof ENTITY = ID,
   AUTO_GENERATED_FIELDS extends keyof ENTITY =
-    | keyof BaseTenantEntity
+    | keyof AbstractBaseTenantEntity
     | ID
     | 'tenantId',
 > extends BaseTypeormTrackedEntityRepository<

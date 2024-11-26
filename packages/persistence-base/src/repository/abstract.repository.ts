@@ -3,7 +3,7 @@ import { Never } from '@aiofc/common-types';
 import { LimitOptions } from './vo/limit-options.interface';
 import { IBaseEntity } from '../entity/base-entity';
 /**
- * @description 以抽象类的形式通用的存储库形态，定义了一些通用的方法，如：
+ * @description 以抽象类的形式描述了一个通用的存储库形态，定义了一些通用的方法，如：
  * upsert、create、update、updatePartial、updateByQuery、
  * count、findAll、findAllPaginated、findById、findOne、delete、
  * entityName、presetWhereOptions

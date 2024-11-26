@@ -30,7 +30,7 @@ export abstract class BaseTypeormTrackedEntityRepository<
 
   archive(criteria: ENTITY[ID]): Promise<boolean>;
   archive(criteria: Array<ENTITY[ID]>): Promise<boolean>;
-
+  // 具体实现归档方法
   async archive(criteria: ENTITY[ID] | Array<ENTITY[ID]>): Promise<boolean> {
     const result = await this.updateByQuery(
       {
@@ -48,6 +48,7 @@ export abstract class BaseTypeormTrackedEntityRepository<
   restore(id: ENTITY[ID]): Promise<boolean>;
   restore(ids: Array<ENTITY[ID]>): Promise<boolean>;
 
+  // 具体实现恢复方法
   async restore(id: ENTITY[ID] | Array<ENTITY[ID]>): Promise<boolean> {
     const result = await this.updateByQuery(
       {
@@ -61,7 +62,7 @@ export abstract class BaseTypeormTrackedEntityRepository<
 
     return Array.isArray(id) ? result === id.length : result === 1;
   }
-
+  // 具体实现查询所有归档数据的方法
   async findAllWithArchived(
     where: FindOptionsWhere<ENTITY>,
     limitOptions?: LimitOptions,

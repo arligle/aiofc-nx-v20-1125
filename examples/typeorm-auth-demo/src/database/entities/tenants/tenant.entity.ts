@@ -19,10 +19,10 @@ import {
   IsStringEnumLocalized,
   IsUUIDLocalized,
 } from '@aiofc/validation';
-import { BaseTenantEntity } from '@aiofc/typeorm';
+import { AbstractBaseTenantEntity } from '@aiofc/typeorm';
 
 @Entity('tenants')
-export class Tenant extends BaseTenantEntity {
+export class Tenant extends AbstractBaseTenantEntity {
   @PrimaryGeneratedColumn('uuid')
   @Expose()
   @IsUUIDLocalized()
