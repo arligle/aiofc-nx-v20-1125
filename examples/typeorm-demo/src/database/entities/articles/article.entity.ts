@@ -1,17 +1,20 @@
 import { AbstractBaseTrackedEntity } from "@aiofc/typeorm";
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
-@Entity('docs')
-export class Doc extends AbstractBaseTrackedEntity
+@Entity('articles')
+export class Article extends AbstractBaseTrackedEntity
 {
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
-    firstName: string;
+    title: string;
 
     @Column()
-    lastName: string;
+    author: string;
+
+    @Column()
+    summary: string;
 
     @Column()
     isActive: boolean;

@@ -8,8 +8,10 @@ import { Logger, loggerModuleForRootAsync } from '@aiofc/logger';
 import { TypeOrmModule, typeOrmModuleConfig } from '@aiofc/nestjs-typeorm';
 import { ClsModule } from 'nestjs-cls';
 import { FastifyRequest } from 'fastify';
-import { DocRepository } from '../repositories/doc.repository';
 import * as Entities from '../database/entities';
+import { ArticleController } from '../controllers/article.controller';
+import { ArticleService } from '../services/article.service';
+import { ArticleRepository } from '../repositories/article.repository';
 @Module({
   imports: [
     ClsModule.forRoot({
@@ -48,11 +50,12 @@ import * as Entities from '../database/entities';
     // 是否需要讲这些实体与数据库同步需要再配置文件.env.yaml中配置：synchronize: true
     TypeOrmModule.forFeature(Object.values(Entities)), // 局部
   ],
-  controllers: [AppController],
+  controllers: [AppController,ArticleController],
   providers: [
     AppService,
     Logger,
-    DocRepository,
+    ArticleService,
+    ArticleRepository,
   ],
   // exports: [AppService],
 })

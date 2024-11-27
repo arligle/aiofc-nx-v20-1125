@@ -3,6 +3,7 @@
   "files": [],
   "include": [],
   "references": [
+    { "path": "../../packages/service-base" },
     { "path": "../../packages/common-types" },
     { "path": "../../packages/persistence-base" },
     { "path": "../../packages/typeorm" },

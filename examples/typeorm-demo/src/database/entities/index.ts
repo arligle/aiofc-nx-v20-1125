@@ -1,5 +1,4 @@
-export * from './docs/doc.entity';
-export * from './docs/document.entity';
+export * from './articles/article.entity';
 export * from './roles/permission-category.entity';
 export * from './roles/permission.entity';
 export * from './roles/user-role.entity';

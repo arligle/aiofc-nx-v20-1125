@@ -11,7 +11,7 @@ import { AbstractRepository, IBaseEntity } from '@aiofc/persistence-base';
 /**
  * @description 以泛型类的形式继承了抽象基础服务类AbstractBaseService，
  * 并实现了具体的方法，这些实现方法都带有TypeORM的事务注解@Transactional()，具有事务处理的能力，
- * 因此，这个类可以应用在TypeORM的实体操作中
+ * 因此，这个类可以应用在TypeORM的实体操作中,因为它已经不是一个抽象类了。
  * @export
  * @class BaseEntityService
  * @template ENTITY

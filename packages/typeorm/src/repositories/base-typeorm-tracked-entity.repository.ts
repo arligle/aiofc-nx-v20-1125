@@ -7,7 +7,7 @@ import { ITrackedRepository, LimitOptions } from '@aiofc/persistence-base';
 export abstract class BaseTypeormTrackedEntityRepository<
     ENTITY extends AbstractBaseTrackedEntity,
     ID extends keyof ENTITY,
-    FIELDS_REQUIRED_FOR_UPDATE extends keyof ENTITY = ID,
+    FIELDS_REQUIRED_FOR_UPDATE extends keyof ENTITY = ID, // 字段_必填_用于更新
     AUTO_GENERATED_FIELDS extends keyof ENTITY =
       | keyof AbstractBaseTrackedEntity
       | ID,

@@ -9,6 +9,7 @@
   },
   "include": ["src/**/*.ts", "src/**/*.json"],
   "references": [
+    { "path": "../../packages/service-base/tsconfig.lib.json" },
     { "path": "../../packages/common-types/tsconfig.lib.json" },
     { "path": "../../packages/persistence-base/tsconfig.lib.json" },
     { "path": "../../packages/typeorm/tsconfig.lib.json" },

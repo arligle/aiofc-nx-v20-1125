@@ -117,8 +117,7 @@ export async function initialize(
   applyExpressCompatibility(fastifyInstance);
   app.register(fastifyHelmet, {});
 
-   // 在 Fastify 应用实例上注册了一个全局管道，用于处理请求数据的验证。
-  // 并创建了一个 I18nValidationPipe 实例。用于处理国际化（i18n）相关的验证逻辑。
+  // 在 Fastify 应用实例上注册了一个全局的类验证管道，用于处理请求数据的验证。
   app.useGlobalPipes(new I18nValidationPipe(DEFAULT_VALIDATION_OPTIONS));
   // 所以首先是全局的，然后是缩小的
   // 确保在应用程序中发生异常时，这些异常会被全局的异常过滤器捕获和处理。
