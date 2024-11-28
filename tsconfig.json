@@ -19,6 +19,7 @@
     { "path": "./packages/typeorm" },
     { "path": "./packages/service-base" },
     { "path": "./packages/auth" },
-    { "path": "./examples/typeorm-auth-demo" }
+    { "path": "./examples/typeorm-auth-demo" },
+    { "path": "./examples/auth-demo" }
   ]
 }
