@@ -16,7 +16,19 @@ export class ArticleService extends BaseEntityService<
   ) {
     super(repository);
   }
-  getData() {
-    return this.repository.findAll();
+
+  async createArticle() {
+    // return this.findAll();
+    const article = new Article();
+    article.title = '《博弈论》';
+    article.author = '约翰·冯·诺伊曼';
+    article.summary =
+      '《博弈论》是一部由约翰·冯·诺伊曼和奥斯卡·摩根斯特恩合著的关于博弈论的经典著作。';
+    article.isActive = true;
+    return this.create(article);
   }
+
+  // async findAll() {
+  //   return this.findAll();
+  // }
 }

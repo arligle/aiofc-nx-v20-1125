@@ -3,7 +3,7 @@ import type { validateSync as _validateSync } from 'class-validator';
 
 const requireFromRootNodeModules = <T = any>(moduleName: string): T => {
   const modulePath = require.resolve(moduleName, { paths: ['../..', '.'] });
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+   
   return require(modulePath) as unknown as T;
 };
 

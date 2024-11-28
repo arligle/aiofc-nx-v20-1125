@@ -12,6 +12,9 @@ import * as Entities from '../database/entities';
 import { ArticleController } from '../controllers/article.controller';
 import { ArticleService } from '../services/article.service';
 import { ArticleRepository } from '../repositories/article.repository';
+import { TenantService } from '../services/tenants/tenant.service';
+import { TenantsRepository } from '../repositories/tenants/tenants.repository';
+import { TenantsController } from '../controllers/tenants/tenants.controller';
 @Module({
   imports: [
     ClsModule.forRoot({
@@ -50,12 +53,18 @@ import { ArticleRepository } from '../repositories/article.repository';
     // 是否需要讲这些实体与数据库同步需要再配置文件.env.yaml中配置：synchronize: true
     TypeOrmModule.forFeature(Object.values(Entities)), // 局部
   ],
-  controllers: [AppController,ArticleController],
+  controllers: [
+    AppController,
+    ArticleController,
+    TenantsController
+  ],
   providers: [
     AppService,
     Logger,
     ArticleService,
     ArticleRepository,
+    TenantService,
+    TenantsRepository
   ],
   // exports: [AppService],
 })

@@ -5,7 +5,7 @@ import { IAccessTokenSingleTenantPayload } from '../vo/payload';
 import { GeneralInternalServerException } from '@aiofc/exceptions';
 
 @Injectable()
-// eslint-disable-next-line
+ 
 export class JwtPayloadTenantResolutionService extends AbstractTenantResolutionService<IAccessTokenSingleTenantPayload> {
   private readonly logger: Logger = new Logger(
     JwtPayloadTenantResolutionService.name,

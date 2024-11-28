@@ -41,8 +41,15 @@ export class BaseEntityService<
   constructor(protected readonly repository: REPOSITORY) {
     super();
   }
-
-  create(
+/*
+ * @description
+  传入一个ENTITY类型的对象作为参数
+  函数自动完成两个操作：
+  从ENTITY中排除自动生成的字段
+  从ENTITY中选择ID字段，然后将其变成可选的
+  最后返回一个ENTITY类型的对象
+ */
+create(
     entity: Omit<ENTITY, AUTO_GENERATED_FIELDS> & Partial<Pick<ENTITY, ID>>,
   ): Promise<ENTITY>;
 
