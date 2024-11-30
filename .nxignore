@@ -1,3 +1,6 @@
 examples/fastify-server-demo
 # examples/typeorm-demo
+examples/typeorm-auth-demo
+examples/auth-demo
+tools
 packages/engineer

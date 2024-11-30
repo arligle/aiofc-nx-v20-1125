@@ -9,12 +9,12 @@ import { TypeOrmModule, typeOrmModuleConfig } from '@aiofc/nestjs-typeorm';
 import { ClsModule } from 'nestjs-cls';
 import { FastifyRequest } from 'fastify';
 import * as Entities from '../database/entities';
-import { ArticleController } from '../controllers/article.controller';
-import { ArticleService } from '../services/article.service';
-import { ArticleRepository } from '../repositories/article.repository';
+import { ArticleService } from '../services/articles/article.service';
 import { TenantService } from '../services/tenants/tenant.service';
 import { TenantsRepository } from '../repositories/tenants/tenants.repository';
 import { TenantsController } from '../controllers/tenants/tenants.controller';
+import { ArticleController } from '../controllers/articles/article.controller';
+import { ArticleRepository } from '../repositories/articles/article.repository';
 @Module({
   imports: [
     ClsModule.forRoot({

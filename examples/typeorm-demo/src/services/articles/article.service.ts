@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { ArticleRepository } from '../repositories/article.repository';
 import { BaseEntityService } from '@aiofc/service-base';
-import { Article } from '../database/entities';
+import { Article } from '../../database/entities';
 import { ClsService, ClsStore } from 'nestjs-cls';
+import { ArticleRepository } from '../../repositories/articles/article.repository';
 
 @Injectable()
 export class ArticleService extends BaseEntityService<
@@ -17,13 +17,12 @@ export class ArticleService extends BaseEntityService<
     super(repository);
   }
 
-  async createArticle() {
+  async createArticle(title: string, author: string, summary: string) {
     // return this.findAll();
     const article = new Article();
-    article.title = '《博弈论》';
-    article.author = '约翰·冯·诺伊曼';
-    article.summary =
-      '《博弈论》是一部由约翰·冯·诺伊曼和奥斯卡·摩根斯特恩合著的关于博弈论的经典著作。';
+    article.title = title;
+    article.author = author;
+    article.summary = summary;
     article.isActive = true;
     return this.create(article);
   }

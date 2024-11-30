@@ -10,7 +10,11 @@ import chokidar, { FSWatcher } from 'chokidar';
 import { pathExists, realpath } from 'fs-extra';
 import { importOrRequireFile } from '../utils/import';
 import { annotateSourceCode, createTypesFile } from '../utils/typescript';
-
+/**
+ * @description 生成类型参数
+ * @export
+ * @interface GenerateTypesArguments
+ */
 export interface GenerateTypesArguments {
   typesOutputPath: string;
   watch: boolean;
@@ -25,7 +29,11 @@ type TranslationsType = {
   error: (I18nTranslation & Error) | null;
   path: string;
 };
-
+/**
+ * @description 通过实现 yargs.CommandModule 接口，定义了一个用于生成翻译文件类型的命令行工具。
+ * @export
+ * @class GenerateTypesCommand
+ */
 export class GenerateTypesCommand
   implements yargs.CommandModule<object, GenerateTypesArguments>
 {
