@@ -21,7 +21,9 @@
         "tsConfig": "packages/exceptions/tsconfig.lib.json",
         "packageJson": "packages/exceptions/package.json",
         "main": "packages/exceptions/src/index.ts",
-        "assets": ["packages/exceptions/*.md"]
+        "assets": [
+          "packages/exceptions/*.md"
+        ]
       }
     },
     "nx-release-publish": {

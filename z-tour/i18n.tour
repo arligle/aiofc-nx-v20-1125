@@ -1,0 +1,51 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "i18n",
+  "steps": [
+    {
+      "file": "examples/i18n-demo/src/app.module.ts",
+      "description": "正常使用nestjs-i18n需要在全局登记I18nModule",
+      "line": 16
+    },
+    {
+      "file": "examples/i18n-demo/src/main.ts",
+      "description": "app初始化时配置全局管道，这个I18nValidationPipe继承自ValidationPipe",
+      "line": 10
+    },
+    {
+      "file": "examples/i18n-demo/src/main.ts",
+      "description": "全局的过滤器也封装了i18n",
+      "line": 12
+    },
+    {
+      "file": "examples/i18n-demo/src/app.module.ts",
+      "description": "我们对nestjs-i8n进行了一定的封装，主要是把模块登记包装为一个函数i18nModuleForRootAsync()，可以替代原来的全局注册代码。",
+      "line": 15
+    },
+    {
+      "file": "examples/i18n-demo/src/main.ts",
+      "description": "上面的全局管道以及过滤器的引用已经封装到fastifyBootstrap函数。",
+      "line": 24
+    },
+    {
+      "file": "examples/i18n-demo/src/assets/.env.yaml",
+      "description": "配置已经与代码分离，每个项目可以通过配置文件写入配置",
+      "line": 36
+    },
+    {
+      "file": "examples/i18n-demo/src/config/root.config.ts",
+      "description": "在根配置增加i18n的配置。",
+      "line": 15
+    },
+    {
+      "file": "packages/i18n/src/lib/config/i18.ts",
+      "description": "配置设置以及验证",
+      "line": 3
+    },
+    {
+      "file": "examples/i18n-demo/src/app.controller.ts",
+      "description": "使用的方法",
+      "line": 16
+    }
+  ]
+}

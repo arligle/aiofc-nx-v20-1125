@@ -1,0 +1,26 @@
+{
+  "name": "i18n-demo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "examples/i18n-demo/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "i18n-demo:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "i18n-demo:build:development"
+        },
+        "production": {
+          "buildTarget": "i18n-demo:build:production"
+        }
+      }
+    }
+  }
+}
