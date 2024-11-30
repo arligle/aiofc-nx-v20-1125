@@ -13,9 +13,13 @@
     { "path": "./examples/fastify-server-demo" },
     { "path": "./packages/async-storage" },
     { "path": "./packages/nestjs-typeorm" },
-    { "path": "./examples/typorm-demo" },
+    { "path": "./examples/typeorm-demo" },
     { "path": "./packages/persistence-base" },
     { "path": "./packages/common-types" },
-    { "path": "./packages/typeorm" }
+    { "path": "./packages/typeorm" },
+    { "path": "./packages/service-base" },
+    { "path": "./packages/auth" },
+    { "path": "./examples/typeorm-auth-demo" },
+    { "path": "./examples/auth-demo" }
   ]
 }

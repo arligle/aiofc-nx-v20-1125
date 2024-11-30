@@ -8,7 +8,7 @@ import {
 } from 'class-validator';
 
 export const MatchesWithProperty = <T>(
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   type: ClassConstructor<T>,
   property: (o: T) => unknown,
   validationOptions?: ValidationOptions,

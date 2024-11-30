@@ -10,7 +10,6 @@
     "@nestjs/common": "^10.4.8",
     "@aiofc/common-types": "workspace:*",
     "nestjs-paginate": "^9.3.1",
-    "nestjs-cls": "^4.4.1",
     "@aiofc/exceptions": "workspace:*"
   },
   "type": "commonjs",

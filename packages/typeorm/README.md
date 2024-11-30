@@ -1,7 +1,7 @@
 # typeorm
+这是在typeorm基础上扩展的模块
 
-This library was generated with [Nx](https://nx.dev).
+## 扩展点
+- src/repository/BaseEntity.ts
 
-## Building
-
-Run `nx build typeorm` to build the library.
+我们从这个类开始构建我们的Entity，通过继承BaseEntity获得其能力。
