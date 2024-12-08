@@ -10,7 +10,8 @@
     "@nestjs/common": "^10.4.8",
     "@aiofc/common-types": "workspace:*",
     "nestjs-paginate": "^9.3.1",
-    "@aiofc/exceptions": "workspace:*"
+    "@aiofc/exceptions": "workspace:*",
+    "nestjs-cls": "^3.0.0"
   },
   "type": "commonjs",
   "main": "./src/index.js",

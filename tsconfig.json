@@ -20,6 +20,7 @@
     { "path": "./packages/service-base" },
     { "path": "./packages/auth" },
     { "path": "./examples/auth-demo" },
-    { "path": "./examples/i18n-demo" }
+    { "path": "./examples/i18n-demo" },
+    { "path": "./apps/previews" }
   ]
 }

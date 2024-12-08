@@ -4,7 +4,7 @@ import { getExistingFilePaths } from './utils/get-existing-file-paths';
 import type { DynamicModule, Type } from '@nestjs/common';
 import { fileLoader, TypedConfigModule } from '../core';
 
-export function configModuleForRoot(
+export function typedConfigModuleForRoot(
   baseDir: string,
   rootSchemaClass: Type<unknown>,
   options?: SetupConfigOptions,
@@ -40,3 +40,4 @@ export function configModuleForRoot(
     exports: [...(dynamicModule.exports ?? []), ROOT_CONFIG_ALIAS_TOKEN],
   };
 }
+

@@ -1,5 +1,6 @@
 examples/fastify-server-demo
-# examples/typeorm-demo
+examples/typeorm-demo
 examples/auth-demo
 tools
 packages/engineer
+examples/i18n-demo

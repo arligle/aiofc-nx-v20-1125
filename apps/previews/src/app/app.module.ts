@@ -1,17 +1,16 @@
 import { Module } from '@nestjs/common';
-
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import rootConfig from '../config/root.config';
-import { Logger, loggerModuleForRootAsync } from '@aiofc/logger';
 import { typedConfigModuleForRoot } from '@aiofc/config';
+import rootConfig from '../config/root.config';
+
+
 
 @Module({
   imports: [
-    loggerModuleForRootAsync(),
     typedConfigModuleForRoot(__dirname, rootConfig),
   ],
   controllers: [AppController],
-  providers: [AppService, Logger],
+  providers: [AppService],
 })
 export class AppModule {}

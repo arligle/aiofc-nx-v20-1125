@@ -12,7 +12,8 @@
     "@nestjs/passport": "^10.0.3",
     "passport-jwt": "^4.0.1",
     "@nestjs/jwt": "^10.2.0",
-    "@aiofc/persistence-base": "workspace:*"
+    "@aiofc/persistence-base": "workspace:*",
+    "nestjs-cls": "^3.0.0"
   },
   "type": "commonjs",
   "main": "./src/index.js",
